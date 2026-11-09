@@ -1,0 +1,34 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 100%; height: 100%; overflow: hidden; background: #0b0d12; font-family: "Segoe UI", Arial, sans-serif; color: #fff; }
+#game { display: block; width: 100vw; height: 100vh; cursor: crosshair; }
+
+#hud { position: fixed; inset: 0; pointer-events: none; }
+.hud-top-right { position: absolute; top: 16px; right: 20px; text-align: right; }
+#money { font-size: 28px; font-weight: 800; color: #5ad46a; text-shadow: 0 0 8px #000, 2px 2px 0 #000; letter-spacing: 1px; }
+#stars { font-size: 22px; letter-spacing: 3px; margin-top: 4px; text-shadow: 0 0 6px #000; }
+#stars .on { color: #ffd84a; } #stars .off { color: rgba(255,255,255,.18); }
+
+.hud-bottom-left { position: absolute; left: 20px; bottom: 20px; width: 220px; }
+.bar { height: 12px; background: rgba(0,0,0,.6); border: 2px solid rgba(255,255,255,.4); border-radius: 3px; overflow: hidden; }
+#health { height: 100%; width: 100%; background: linear-gradient(90deg,#4caf50,#8bc34a); transition: width .15s; }
+#weapon { margin-top: 8px; font-weight: 700; text-shadow: 1px 1px 0 #000; }
+
+.hud-bottom-right { position: absolute; right: 20px; bottom: 20px; }
+#minimap { border: 3px solid rgba(255,255,255,.5); border-radius: 50%; background: #222; }
+
+#mission { position: absolute; top: 16px; left: 20px; max-width: 360px; background: rgba(0,0,0,.55); padding: 10px 14px; border-left: 4px solid #ffd84a; font-size: 15px; line-height: 1.4; border-radius: 0 6px 6px 0; }
+#mission:empty { display: none; }
+#mission b { color: #ffd84a; }
+
+#toast { position: absolute; left: 50%; bottom: 90px; transform: translateX(-50%); background: rgba(0,0,0,.7); padding: 8px 18px; border-radius: 6px; font-size: 18px; opacity: 0; transition: opacity .3s; }
+#toast.show { opacity: 1; }
+
+.overlay { position: fixed; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; background: rgba(5,6,10,.9); gap: 14px; z-index: 10; }
+.overlay.hidden { display: none; }
+.overlay h1 { font-size: 72px; font-weight: 900; letter-spacing: 6px; color: #ffd84a; text-shadow: 0 0 30px rgba(255,216,74,.5); }
+.overlay h1.red { color: #e53935; text-shadow: 0 0 30px rgba(229,57,53,.6); }
+.overlay .sub { color: #aaa; font-size: 16px; }
+.overlay button { margin-top: 10px; font-size: 22px; padding: 12px 48px; background: #ffd84a; color: #111; border: 0; border-radius: 6px; font-weight: 800; cursor: pointer; }
+.overlay button:hover { background: #ffe88a; }
+.controls { margin-top: 24px; display: grid; gap: 6px; color: #ccc; font-size: 14px; }
+.controls b { color: #fff; display: inline-block; min-width: 150px; }

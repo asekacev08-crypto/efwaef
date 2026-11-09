@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="data:,">
+<title>Los Kotos — открытый город</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="game"></canvas>
+
+<div id="hud">
+  <div class="hud-top-right">
+    <div id="money">$0</div>
+    <div id="stars"></div>
+  </div>
+  <div class="hud-bottom-left">
+    <div class="bar"><div id="health"></div></div>
+    <div id="weapon"></div>
+  </div>
+  <div class="hud-bottom-right">
+    <canvas id="minimap" width="180" height="180"></canvas>
+  </div>
+  <div id="mission"></div>
+  <div id="toast"></div>
+</div>
+
+<div id="menu" class="overlay">
+  <h1>LOS KOTOS</h1>
+  <p class="sub">открытый город · машины · копы · миссии</p>
+  <button id="start">Играть</button>
+  <div class="controls">
+    <div><b>WASD / стрелки</b> — движение / руль</div>
+    <div><b>E / Enter</b> — сесть / выйти из машины</div>
+    <div><b>Пробел</b> — ручник</div>
+    <div><b>ЛКМ / F</b> — выстрел (мышь — прицел)</div>
+    <div><b>Q</b> — сменить оружие</div>
+    <div><b>M</b> — взять / пропустить миссию</div>
+  </div>
+</div>
+
+<div id="wasted" class="overlay hidden">
+  <h1 class="red">ПОТРАЧЕНО</h1>
+  <p class="sub" id="wasted-text"></p>
+  <button id="respawn">Продолжить</button>
+</div>
+
+<script src="game.js"></script>
+</body>
+</html>
